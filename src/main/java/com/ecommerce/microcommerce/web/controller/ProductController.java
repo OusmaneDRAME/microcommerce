@@ -100,7 +100,10 @@ public class ProductController {
         return produitsAvecMarge;
     }
 
-
+    @GetMapping(value="/Produits/OrderByNom")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+        return productDao.findByOrderByNomAsc();
+    }
 
 
 }
